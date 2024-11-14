@@ -224,19 +224,19 @@ open class RustorePublishTask
             buildFile = config.artifactFile
         )
 
-        logger.v("6/6. Submit publication")
-        val summitResult = rustoreService.submit(
-            token = token,
-            applicationId = config.applicationId,
-            versionId = appVersionId,
-            priorityUpdate = 5,
-        )
-
-        if (summitResult) {
-            logger.v("Upload and submit build file - Successfully Done!")
-        } else {
-            logger.v("Upload and submit build file - Failed!")
-        }
+//        logger.v("6/6. Submit publication")
+//        val summitResult = rustoreService.submit(
+//            token = token,
+//            applicationId = config.applicationId,
+//            versionId = appVersionId,
+//            priorityUpdate = 5,
+//        )
+//
+//        if (summitResult) {
+//            logger.v("Upload and submit build file - Successfully Done!")
+//        } else {
+//            logger.v("Upload and submit build file - Failed!")
+//        }
 
         mockServerWrapper.shutdown()
     }
